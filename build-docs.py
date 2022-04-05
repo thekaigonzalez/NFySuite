@@ -1,8 +1,12 @@
 import subprocess
 
 
-import glob
+import os
 
-for file in glob.glob("./*.md"):
-    fname = file[file.find("\\")+1:file.rfind('.')]
-    subprocess.run(["pandoc", file, "--self-contained", "--css=style.css", "-o", fname + ".html"])
+for path, subtdir, files in os.walk("."):
+    for file in files:
+        if file.endswith(".md"):
+            
+            fname = file[file.find("\\")+1:file.rfind('.')]
+            print(path + fname)
+            subprocess.run(["pandoc", path + "\\" + file, "--self-contained", "--css=style.css", "-o", path + '\\' + fname + ".html"])
