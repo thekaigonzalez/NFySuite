@@ -113,10 +113,11 @@ there.</p>
 <p>There’s no current standard for shuffling, it’s not currently
 <strong>required</strong>.</p>
 <h2 id="playlists---iteration">Playlists - Iteration</h2>
-<p>Playlist iteration works like this;</p>
-<pre><code>if end of current and in playlist
-if next:
-    play next</code></pre>
+<p>Playlist iteration works like this:</p>
+<figure>
+<img src="/NFy%20Playlist%20Algorithm.png" alt="Playlist Algo" />
+<figcaption aria-hidden="true">Playlist Algo</figcaption>
+</figure>
 <p>And should be implemented as such. As shown in <a href="https://thekaigonzalez.github.io/NFyMono">NFy Mono’s
 Repository.</a></p>
 <h2 id="playlists---format">Playlists - Format</h2>
@@ -125,17 +126,17 @@ NFy.</p>
 <p>Developers are recommended to switch to playlistAPI v2 instead of
 v1.</p>
 <p>New:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;songs&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<p>Old:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;songs&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;playlist_songs&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
-<p>Old:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;playlist_songs&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
 <p>simply; for readability and ease of access.</p>
 <h2 id="news---format">News - Format</h2>
 <p>Depending on what you’re making, news should <strong>ALWAYS</strong>
