@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Up to date NFy clients</title>
+  <title>Routes</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -21,32 +21,17 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Up to date NFy clients</h1>
+<h1 class="title">Routes</h1>
 </header>
-<h3 id="nfy">NFy</h3>
-<p>Status: <strong>Behind</strong></p>
-<p>Reason: Older <code>playlist_songs</code> JSON API v1</p>
-<p>Description: The official client for NFy.</p>
-<h3 id="nfy-mono">NFy Mono</h3>
-<p>Status: <strong>On date</strong></p>
-<p>Description: Open Source implementation of NFy.</p>
-<h3 id="nfycli">NFyCli</h3>
-<p>Status: <strong>Behind / Abandoned</strong></p>
-<p>Reason: No Playlist support.</p>
-<p>Description: NFy Command line interface. Written in rust, made for
-playing command line music.</p>
-<h3 id="libnfy">LibNFy</h3>
-<p>Status: <strong>None</strong></p>
-<p>Reason: No work has been done since initial prototype.</p>
-<p>Description: Official library for NFy, written in C++.</p>
-<h3 id="nfyplaylistjs">NFyPlaylistJS</h3>
-<p>Status: <strong>Up to date library - Implementation</strong></p>
-<p>Description: Official helper library that implements the playlist
-algorithm.</p>
-<h3 id="nfy.js">NFy.js</h3>
-<p>Status: <strong>Up to date</strong></p>
-<p>Description: Electron Client for NFy, written in Node.js, HTML, and
-CSS. Community Maintained.</p>
-<p>Page: <a href="https://github.com/Cliometric/NFY">here</a></p>
+<p>What the frontend does to communicate with the backend.</p>
+<h2 id="events">Events</h2>
+<p><code>playMusic</code> - fired when the user wants music to be
+played. Usually fired on the <a href="../ui/">Play button click</a>
+event.</p>
+<p><code>stopMusic</code> - alias for an old event which has been
+deprecated for <code>playMusic</code> debounce. This debounce event is
+still called <code>stopMusic</code>.</p>
+<p><em>NFy.js was designed by roe, BACKEND Written by Roe &amp; Kai
+Gonzalez</em></p>
 </body>
 </html>
